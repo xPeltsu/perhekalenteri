@@ -13,7 +13,7 @@
 ?>
 
 @import url('http://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
-@import url('<?=$headerfonts[$header][url] ?>');
+@import url('<?=$headerfonts[$header]['url'] ?>');
 
 body {
   width: 297mm;
@@ -23,16 +23,16 @@ body {
 }
 
 h1 {
-  font-family: '<?php echo $headerfonts[$header][name]?>', sans-serif;
+  font-family: '<?php echo $headerfonts[$header]['name']?>', sans-serif;
   font-size: 30mm;
   text-align: center;
   text-transform: capitalize;
   text-shadow: 2px 2px 0px #333;
-  color: <?php echo $bgimages[$bgimage][color] ?>;
+  color: <?php echo $bgimages[$bgimage]['color'] ?>;
   height: 60mm;
   line-height: 60mm;
   background-color: #eee;
-  background-image: url("<?php echo $bgimages[$bgimage][image];?>");
+  background-image: url("<?php echo $bgimages[$bgimage]['image'];?>");
   background-size: 100%;
   margin: 0;
 }

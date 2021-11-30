@@ -101,6 +101,18 @@
     return date('j', $timestamp);
   }
 
+
+  // getHolidayName
+  //   Selvittää, onko annettu päivälle pyhäpäiväteksti. Jos päivälle
+  //   on teksti, palauttaa sen, muuten palauttaa null-arvon.
+  function getHolidayName($holidays, $month, $day) {
+    if (isset($holidays[$month][$day])) {
+      return $holidays[$month][$day];
+    } else {
+      return null;
+    }
+  }
+
   // getMonthFromDate
   //   Selvittää kuukauden annetusta Unis-aikaleimasta.
   //   Palauttaa kokonaisluvun välillä 1-12.

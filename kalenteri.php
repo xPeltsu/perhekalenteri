@@ -36,9 +36,9 @@
 
   // Käytetään oletuslistaa, jos nimilistaa ei ole määritelty.
   if (isset($_GET["names"])) {
-    $names = split("\n",$_GET["names"]);
+    $names = explode("\n",$_GET["names"]);
   } else {
-    $names = split("\n",$defaultnames);
+    $names = explode("\n",$defaultnames);
   }
 
   // Muodostetaan pyhäpäivistä ns. pohjataulukko, jossa on
@@ -125,7 +125,7 @@
       echo "<td class='week'></td>";
     }
     echo "<td class='day'>$day</td>";
-    echo "<td class='weekday'>$weekdays[$weekday]<span class='holidayname'>" . $holidays[$month][$day]  . "</span></td>";
+    echo "<td class='weekday'>$weekdays[$weekday]<span class='holidayname'>" . getHolidayName($holidays,$month,$day) . "</span></td>";
     foreach ($names as $name) {
       echo "<td class='memo'></td>";
     }
